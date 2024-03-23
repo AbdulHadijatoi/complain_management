@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->name('dashboard');
     
-    Route::group(['prefix'=>'contests'], function () {
+    Route::group(['prefix'=>'complaints'], function () {
         Route::get('/', [ContestController::class,'index'])->name('listContests');
         Route::get('get-data', [ContestController::class,'getData']);
         Route::get('create', [ContestController::class,'create'])->name('createContest');

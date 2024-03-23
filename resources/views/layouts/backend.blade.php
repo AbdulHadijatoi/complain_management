@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <title>{{$page_title??"Admin Panel Lakhpati"}}</title>
+        <title>{{$page_title??"Admin Panel COMPLAINT MANAGEMENT"}}</title>
 
         <meta name="author" content="abdul hadi">
 
@@ -108,7 +108,7 @@ th, td {
                 @endif
                 @yield('content')
             </main>
-            @include('components.inc.dashboard-footer')
+
         </div>
         
         <script src="{{ mix('js/oneui.app.js') }}"></script>

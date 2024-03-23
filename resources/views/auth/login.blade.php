@@ -11,7 +11,7 @@
                 </div>
                 <div class="block-content">
                   <div class="p-sm-3 px-lg-4 px-xxl-5 py-lg-5 text-center">
-                    <h1 class="h4 mb-1">LAKHPATI</h1>
+                    <h1 class="h4 mb-1">COMPLAINT MANAGEMENT</h1>
                     <p class="fw-small text-muted">
                       Welcome back, please login
                     </p>
@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="fs-sm text-muted text-center">
-            <strong>LAKHPATI</strong> Copyright &copy; <span data-toggle="year-copy"></span> All rights reserved
+            <strong>COMPLAINT MANAGEMENT</strong> Copyright &copy; <span data-toggle="year-copy"></span> All rights reserved
           </div>
         </div>
       </div>

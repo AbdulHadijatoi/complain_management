@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddMoreColumnsToParticipantsTable extends Migration
+class CreatePopulationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddMoreColumnsToParticipantsTable extends Migration
      */
     public function up()
     {
-        Schema::table('participants', function (Blueprint $table) {
-            $table->string("status")->nullable();
+        Schema::create('population', function (Blueprint $table) {
+            $table->id();
+            $table->string("name");
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddMoreColumnsToParticipantsTable extends Migration
      */
     public function down()
     {
-        Schema::table('participants', function (Blueprint $table) {
-            $table->dropColumn(['status']);
-        });
+        Schema::dropIfExists('population');
     }
 }

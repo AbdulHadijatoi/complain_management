@@ -6,7 +6,7 @@ use App\Models\Participant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class ParticipantController extends Controller
+class UserController extends Controller
 {
     public function index(Request $request)
     {

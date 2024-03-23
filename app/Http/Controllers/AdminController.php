@@ -6,7 +6,7 @@ use App\Models\Contest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class ContestController extends Controller
+class AdminController extends Controller
 {
     public function index(Request $request)
     {

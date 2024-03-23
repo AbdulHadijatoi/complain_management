@@ -4,7 +4,7 @@
             <span class="smini-visible">
                 <i class="fa fa-circle-notch text-primary"></i>
             </span>
-            <span class="smini-hide fs-5 tracking-wider">LAKHPATI</span>
+            <span class="smini-hide fs-5 tracking-wider">COMPLAINT MANAGEMENT</span>
         </a>
        
         <div>
@@ -24,42 +24,60 @@
                         <span class="nav-main-link-name">Dashboard</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">Contests</li>
+                <li class="nav-main-heading">Manage Complaints</li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('contests/create') ? ' active' : '' }}" href="{{route('createContest')}}">
-                        <i class="nav-main-link-icon si si-plus"></i>
-                        <span class="nav-main-link-name">Create Contest</span>
-                    </a>
-                </li>
-                <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('contests') ? ' active' : '' }}" href="{{route('listContests')}}">
+                    <a class="nav-main-link{{ request()->is('complaints') ? ' active' : '' }}" href="#">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">List Contests</span>
+                        <span class="nav-main-link-name">All Complaints</span>
                     </a>
                 </li>
+
                 
-                <li class="nav-main-heading">Participations</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('participants') ? ' active' : '' }}" href="{{route('listParticipants')}}">
+                    <a class="nav-main-link{{ request()->is('complaints/open') ? ' active' : '' }}" href="#">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">List Participants</span>
+                        <span class="nav-main-link-name">Open Complaints</span>
                     </a>
                 </li>
                 
-                <li class="nav-main-heading">Payments</li>
-                <li class="nav-main-item" disabled>
-                    <a class="nav-main-link" href="#">
-                        <i class="nav-main-link-icon fa fa-dollar-sign"></i>
-                        <span class="nav-main-link-name">Easypaisa Payments</span>
+                <li class="nav-main-item">
+                    <a class="nav-main-link{{ request()->is('complaints/pending') ? ' active' : '' }}" href="#">
+                        <i class="nav-main-link-icon si si-list"></i>
+                        <span class="nav-main-link-name">Pending Complaints</span>
                     </a>
                 </li>
-                <li class="nav-main-item" disabled>
-                    <a class="nav-main-link" href="#">
-                        <i class="nav-main-link-icon fa fa-money-check-alt"></i>
-                        <span class="nav-main-link-name">Jazzcash Payments</span>
+
+                <li class="nav-main-item">
+                    <a class="nav-main-link{{ request()->is('complaints/closed') ? ' active' : '' }}" href="#">
+                        <i class="nav-main-link-icon si si-list"></i>
+                        <span class="nav-main-link-name">Closed Complaints</span>
                     </a>
                 </li>
+                
+                <li class="nav-main-item">
+                    <a class="nav-main-link{{ request()->is('complaints/rejected') ? ' active' : '' }}" href="#">
+                        <i class="nav-main-link-icon si si-list"></i>
+                        <span class="nav-main-link-name">Rejected Complaints</span>
+                    </a>
+                </li>
+                
+                <li class="nav-main-heading">Manage Users</li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link{{ request()->is('contractors') ? ' active' : '' }}" href="#">
+                        <i class="nav-main-link-icon si si-list"></i>
+                        <span class="nav-main-link-name">Contractors</span>
+                    </a>
+                </li>
+                
+                <li class="nav-main-heading">Preferences</li>
+                <li class="nav-main-item" disabled>
+                    <a class="nav-main-link{{ request()->is('settings') ? ' active' : '' }}" href="#">
+                        <i class="nav-main-link-icon si si-settings"></i>
+                        <span class="nav-main-link-name">App Settings</span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>
