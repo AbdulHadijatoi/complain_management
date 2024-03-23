@@ -27,52 +27,58 @@
                 <li class="nav-main-heading">Manage Complaints</li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('complaints') ? ' active' : '' }}" href="{{route('listComplaints')}}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">All Complaints</span>
+                        <span class="nav-main-link-name">All</span>
                     </a>
                 </li>
 
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/open') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('complaints/open') ? ' active' : '' }}" href="{{route('filteredComplainList','open')}}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Open Complaints</span>
+                        <span class="nav-main-link-name">Open</span>
                     </a>
                 </li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/pending') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('complaints/pending') ? ' active' : '' }}" href="{{route('filteredComplainList','pending')}}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Pending Complaints</span>
+                        <span class="nav-main-link-name">Pending</span>
                     </a>
                 </li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/closed') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('complaints/closed') ? ' active' : '' }}" href="{{route('filteredComplainList','closed')}}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Closed Complaints</span>
+                        <span class="nav-main-link-name">Closed</span>
                     </a>
                 </li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/rejected') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('complaints/rejected') ? ' active' : '' }}" href="{{route('filteredComplainList','rejected')}}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Rejected Complaints</span>
+                        <span class="nav-main-link-name">Rejected</span>
                     </a>
                 </li>
                 
                 <li class="nav-main-heading">Manage Users</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('contractors') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('contractors/create') ? ' active' : '' }}" href="{{route('createContractor')}}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Contractors</span>
+                        <span class="nav-main-link-name">Create Contractor</span>
+                    </a>
+                </li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link{{ request()->is('contractors') ? ' active' : '' }}" href="{{route('listContractors')}}">
+                        <i class="nav-main-link-icon si si-list"></i>
+                        <span class="nav-main-link-name">List Contractors</span>
                     </a>
                 </li>
                 
                 <li class="nav-main-heading">Preferences</li>
                 <li class="nav-main-item" disabled>
-                    <a class="nav-main-link{{ request()->is('settings') ? ' active' : '' }}" href="#">
+                    <a class="nav-main-link{{ request()->is('settings') ? ' active' : '' }}" href="{{route('settings')}}">
                         <i class="nav-main-link-icon si si-settings"></i>
                         <span class="nav-main-link-name">App Settings</span>
                     </a>

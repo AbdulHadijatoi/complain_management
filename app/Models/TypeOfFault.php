@@ -9,4 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class TypeOfFault extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
 }

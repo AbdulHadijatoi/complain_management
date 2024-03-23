@@ -11,4 +11,5 @@ class Population extends Model
     use HasFactory;
 
     protected $table = "population";
+    protected $guarded = [];
 }

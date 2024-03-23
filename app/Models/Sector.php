@@ -9,4 +9,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Sector extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }

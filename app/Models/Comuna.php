@@ -11,4 +11,6 @@ class Comuna extends Model
     use HasFactory;
 
     protected $table = "comuna";
+
+    protected $guarded = [];
 }

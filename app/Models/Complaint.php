@@ -33,6 +33,6 @@ class Complaint extends Model
             return Storage::url($value);
         }
 
-        return $value;
+        return $value??'';
     }
 }

@@ -37,8 +37,9 @@ class ComplaintController extends AppBaseController{
         if ($imagePath) {
             $data['image'] = $imagePath;
         }
+        $data['status'] = "pending";
 
-        $complaint = Complaint::create($data);
+        Complaint::create($data);
         return $this->sendSuccess('Complaint created successfully');
     }
 

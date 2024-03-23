@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Contractor extends Model {
     use HasFactory, SoftDeletes;
 
+    protected $guarded = [];
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

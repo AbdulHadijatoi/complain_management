@@ -12,7 +12,7 @@ class AuthController extends AppBaseController
     public function contractorLogin(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'phone' => 'required',
+            'email' => 'required',
             'password' => 'required',
         ]);
 
@@ -20,7 +20,7 @@ class AuthController extends AppBaseController
             return response()->json(['error' => $validator->errors()], 422);
         }
 
-        if (Auth::attempt(['phone' => $request->phone, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $user = Auth::user();
 
             if(!$user->isContractor()){
