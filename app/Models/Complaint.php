@@ -22,7 +22,7 @@ class Complaint extends Model
 
     public function complaintDetails(): HasOne
     {
-        return $this->hasOne(ComplaintDetails::class,'complaint_id');
+        return $this->hasOne(ComplaintDetails::class,'complaint_id')->latest('id');
     }
 
     public function status(): BelongsTo
