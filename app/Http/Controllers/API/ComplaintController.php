@@ -87,7 +87,7 @@ class ComplaintController extends AppBaseController{
             $data['image'] = $imagePath;
         }
         $data['update_remarks'] = $update_remarks;
-        $data['complaint_id'] = $id;
+        $data['complaint_id'] = $complaint->id;
         $complaintDetails = $complaint->complaintDetails;
         if($complaintDetails){
             $complaintDetails->update_remarks = $update_remarks;
