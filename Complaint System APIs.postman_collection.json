@@ -8,6 +8,204 @@
 	},
 	"item": [
 		{
+			"name": "guest user",
+			"item": [
+				{
+					"name": "Constants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/constants",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"constants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Complaint",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_no",
+									"value": "Post123",
+									"type": "text"
+								},
+								{
+									"key": "post_address",
+									"value": "Test post address",
+									"type": "text"
+								},
+								{
+									"key": "type_of_fault",
+									"value": "internal fault option",
+									"type": "text"
+								},
+								{
+									"key": "date_of_complaint",
+									"value": "2023-12-03",
+									"type": "text"
+								},
+								{
+									"key": "complainant_name",
+									"value": "hadi",
+									"type": "text"
+								},
+								{
+									"key": "complaint_rut",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "210321",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": " uploading file",
+									"type": "text"
+								},
+								{
+									"key": "comuna",
+									"value": "comuna",
+									"type": "text"
+								},
+								{
+									"key": "sector",
+									"value": "sector1",
+									"type": "text"
+								},
+								{
+									"key": "population",
+									"value": "population",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/hadi/Pictures/fredrik-ohlander-BGwuBJ7_eFU-unsplash.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_live}}/create-complaint",
+							"host": [
+								"{{base_url_live}}"
+							],
+							"path": [
+								"create-complaint"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth user",
+			"item": [
+				{
+					"name": "Assigned Complaints",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url_live}}/contractor/complaints/get-assigned",
+							"host": [
+								"{{base_url_live}}"
+							],
+							"path": [
+								"contractor",
+								"complaints",
+								"get-assigned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Complaint Status",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "complaint_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "update_remarks",
+									"value": "Resolved with some remarks",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/hadi/Pictures/fredrik-ohlander-BGwuBJ7_eFU-unsplash.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_live}}/contractor/complaints/close",
+							"host": [
+								"{{base_url_live}}"
+							],
+							"path": [
+								"contractor",
+								"complaints",
+								"close"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Contractor Login",
 			"request": {
 				"auth": {
@@ -36,186 +234,13 @@
 					]
 				},
 				"url": {
-					"raw": "{{base_url}}/contractor/login",
+					"raw": "{{base_url_live}}/contractor/login",
 					"host": [
-						"{{base_url}}"
+						"{{base_url_live}}"
 					],
 					"path": [
 						"contractor",
 						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Complaint",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "contractor_id",
-							"value": "1",
-							"type": "text"
-						},
-						{
-							"key": "post_no",
-							"value": "Post123",
-							"type": "text"
-						},
-						{
-							"key": "post_address",
-							"value": "Test post address",
-							"type": "text"
-						},
-						{
-							"key": "type_of_fault",
-							"value": "internal fault option",
-							"type": "text"
-						},
-						{
-							"key": "date_of_complaint",
-							"value": "2023-12-03",
-							"type": "text"
-						},
-						{
-							"key": "complainant_name",
-							"value": "hadi",
-							"type": "text"
-						},
-						{
-							"key": "complaint_rut",
-							"value": "test",
-							"type": "text"
-						},
-						{
-							"key": "phone",
-							"value": "210321",
-							"type": "text"
-						},
-						{
-							"key": "image",
-							"type": "file",
-							"src": "/Users/hadi/Pictures/fredrik-ohlander-BGwuBJ7_eFU-unsplash.jpeg"
-						},
-						{
-							"key": "comuna",
-							"value": "comuna",
-							"type": "text"
-						},
-						{
-							"key": "sector",
-							"value": "sector1",
-							"type": "text"
-						},
-						{
-							"key": "population",
-							"value": "population",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}/create-complaint",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"create-complaint"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Constants",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{base_url}}/constants",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"constants"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Assigned Complaints",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{token}}"
-					}
-				],
-				"url": {
-					"raw": "{{base_url}}/contractor/complaints/get-assigned",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"contractor",
-						"complaints",
-						"get-assigned"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Complaint Status",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{token}}"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "complaint_id",
-							"value": "1",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}/contractor/complaints/close",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"contractor",
-						"complaints",
-						"close"
 					]
 				}
 			},
@@ -246,13 +271,18 @@
 	],
 	"variable": [
 		{
-			"key": "base_url",
+			"key": "base_url_live",
 			"value": "https://complain-system.rimberio.site",
 			"type": "string"
 		},
 		{
 			"key": "token",
 			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODIzOTY1ZjFjNjRhNGI3NzEyNTM4ZTMyNjgxNzVkNzM5NTU0NzI5ZjBkYWQwNDJjOWViMDA2ZWFiZDY3YjA4NzJkM2NmZTc0MGM2ZWYxN2EiLCJpYXQiOjE3MTExOTU3MzcsIm5iZiI6MTcxMTE5NTczNywiZXhwIjoxNzQyNzMxNzM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.YWZQ3_c0PAfUrptVi-iIDLhOzuHGjvwZPV59gumwmS1tYDW8CN4Xgtxc7m673hQyYcL9aSvdRM1xLLXY7AXkxu4U8MR_c7HLlLxUh9RMiYOtrZpD90R1FysUrfgK8spChqJ3DJdXOCBX_wrfzzLzxD7ur6zJ9LNjZXbTQ4smhrVE2OaEtoROwwBdrnMAgTzkZLtkAt9cFynMTjHN_2l1WoOOdrFPk3fohcpE-1ubMNCKtsoZwQ_QQXFZ4RNsDaHBmaBUlq149agmaWHFSYm76REiMcVpfOgilO4CFrdfB35rQOtkOffYd6bCFL2Fn8IuOeK2V1XJpf5kTjjmMjMCqEeCQ7XYvdPqNRiDm-IZfAFDkz1CoAf5mUaqiX4KitCt9maZ4vU6BI28Zt8PVSrI1EWA3W9mjDCktxAyTghkETLIXAILuJDvD2MaR72EPv2HUdR1kE8oVD7UF3_632VQZkRN8JlmivZSkWqNCdJCZLK9zS-54h38kAHPK5dB7j5l5KdjaqX_XpTFgL8zgTG-f-OTd8CXqWuHkDYCHnY4nSvaE5L2rOUvEyJYeP1Y-mVw9dGwflVorX2F_fZVCDWXDuJf2MfeXPdJzcodVQwGaVlwy_w9QQY3xofFZQ-qwCmr-oNwXVb_Sb-61VFAcb4yz3in_NnrDsC0xIEoQR1slkE",
+			"type": "string"
+		},
+		{
+			"key": "base_url_local",
+			"value": "http://127.0.0.1:8000/api/v1",
 			"type": "string"
 		}
 	]

@@ -15,6 +15,7 @@ class AdminController extends Controller
         $counts = DB::table('complaints')
                     ->select('status', DB::raw('count(*) as count'))
                     ->groupBy('status')
+                    ->withoutTrashed()
                     ->get();
     
         // Initialize counts array with default values
