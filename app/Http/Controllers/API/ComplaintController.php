@@ -87,8 +87,13 @@ class ComplaintController extends AppBaseController{
         }
         $data['update_remarks'] = $update_remarks;
         $data['complaint_id'] = $id;
-
-        ComplaintDetails::create($data);
+        $complaintDetails = $complaint->complaintDetails;
+        if($complaintDetails){
+            $complaintDetails->update_remarks = $update_remarks;
+            $complaintDetails->image = $imagePath;
+        }else{
+            ComplaintDetails::create($data);
+        }
         // CONTRACTOR REMARKS:ENDS
 
         return $this->sendSuccess("Complaint status updated successfully!");
