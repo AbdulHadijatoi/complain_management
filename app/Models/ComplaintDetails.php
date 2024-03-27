@@ -5,29 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
-class Complaint extends Model
+class ComplaintDetails extends Model
 {
     use SoftDeletes, HasFactory;
 
     protected $guarded = [];
     
-    public function contractor(): BelongsTo
+    public function complaint(): BelongsTo
     {
-        return $this->belongsTo(Contractor::class,'contractor_id');
-    }
-
-    public function complaintDetails(): HasOne
-    {
-        return $this->hasOne(ComplaintDetails::class,'complaint_id');
-    }
-
-    public function status(): BelongsTo
-    {
-        return $this->belongsTo(ComplaintStatus::class,'code');
+        return $this->belongsTo(Complaint::class,'complaint_id');
     }
 
     // Accessor for image attribute

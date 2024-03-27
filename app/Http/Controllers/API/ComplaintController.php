@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\AppBaseController;
 use App\Models\Complaint;
+use App\Models\ComplaintDetails;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -21,7 +22,7 @@ class ComplaintController extends AppBaseController{
             'complainant_name' => 'nullable|string',
             'complaint_rut' => 'nullable|string',
             'phone' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5256',
             'comuna' => 'nullable|string',
             'sector' => 'nullable|string',
             'population' => 'nullable|string',
@@ -58,8 +59,12 @@ class ComplaintController extends AppBaseController{
     public function closeComplaint(Request $request) {
         $request->validate([
             'complaint_id' => 'required|exists:complaints,id',
+            'update_remarks' => 'required',
+            'proof_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5256',
         ]);
         $id = $request->complaint_id;
+        $update_remarks = $request->update_remarks;
+        $image = $request->image;
         $complaint = Complaint::find($id);
 
         if(!$complaint){
@@ -68,6 +73,23 @@ class ComplaintController extends AppBaseController{
 
         $complaint->status = "closed";
         $complaint->save();
+
+        // CONTRACTOR REMARKS:BEGINS
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imagePath = $image->store('complaint_remark_images');
+        }
+
+        $data = $request->all();
+        if ($imagePath) {
+            $data['image'] = $imagePath;
+        }
+        $data['update_remarks'] = $update_remarks;
+        $data['complaint_id'] = $id;
+
+        ComplaintDetails::create($data);
+        // CONTRACTOR REMARKS:ENDS
 
         return $this->sendSuccess("Complaint status updated successfully!");
     }

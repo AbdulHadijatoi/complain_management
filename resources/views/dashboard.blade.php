@@ -101,8 +101,8 @@
                     {{ __('Recently submitted complaints') }}
                 </h3>
             </div>
-            <div class="block-content block-content-full">
-                <table class="table responsive table-bordered table-striped table-vcenter fs-sm">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped table-vcenter">
                     <thead>
                         <tr>
                             <th class="text-center" style="width: 80px;">{{ __('No') }}</th>
@@ -141,7 +141,7 @@
                             <td>{{ $complaint->sector }}</td>
                             <td>{{ $complaint->population }}</td>
                             <td>
-                                <span class="btn btn-warning">{{ $complaint->status ?? '-' }}</span>
+                                <span class="btn btn-sm btn-alt-warning">{{ $complaint->status ?? '-' }}</span>
                             </td>
                         </tr>
                         @endforeach
