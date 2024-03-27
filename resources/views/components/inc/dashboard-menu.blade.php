@@ -4,7 +4,7 @@
             <span class="smini-visible">
                 <i class="fa fa-circle-notch text-primary"></i>
             </span>
-            <span class="smini-hide fs-5 tracking-wider">COMPLAINT MANAGEMENT</span>
+            <span class="smini-hide fs-5 tracking-wider">{{ __('COMPLAINT MANAGEMENT') }}</span>
         </a>
        
         <div>
@@ -21,66 +21,66 @@
                 <li class="nav-main-item">
                     <a class="nav-main-link{{ request()->is('dashboard') ? ' active' : '' }}" href="/dashboard">
                         <i class="nav-main-link-icon si si-cursor"></i>
-                        <span class="nav-main-link-name">Dashboard</span>
+                        <span class="nav-main-link-name">{{ __('Dashboard') }}</span>
                     </a>
                 </li>
-                <li class="nav-main-heading">Manage Complaints</li>
+                <li class="nav-main-heading">{{ __('Manage Complaints') }}</li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints') ? ' active' : '' }}" href="{{route('listComplaints')}}">
+                    <a class="nav-main-link{{ request()->is('complaints') ? ' active' : '' }}" href="{{ route('listComplaints') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">All</span>
+                        <span class="nav-main-link-name">{{ __('All') }}</span>
                     </a>
                 </li>
 
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/open') ? ' active' : '' }}" href="{{route('filteredComplainList','open')}}">
+                    <a class="nav-main-link{{ request()->is('complaints/filter/open') ? ' active' : '' }}" href="{{ route('filteredComplainList','open') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Open</span>
+                        <span class="nav-main-link-name">{{ __('Open') }}</span>
                     </a>
                 </li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/pending') ? ' active' : '' }}" href="{{route('filteredComplainList','pending')}}">
+                    <a class="nav-main-link{{ request()->is('complaints/filter/pending') ? ' active' : '' }}" href="{{ route('filteredComplainList','pending') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Pending</span>
+                        <span class="nav-main-link-name">{{ __('Pending') }}</span>
                     </a>
                 </li>
 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/closed') ? ' active' : '' }}" href="{{route('filteredComplainList','closed')}}">
+                    <a class="nav-main-link{{ request()->is('complaints/filter/closed') ? ' active' : '' }}" href="{{ route('filteredComplainList','closed') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Closed</span>
+                        <span class="nav-main-link-name">{{ __('Closed') }}</span>
                     </a>
                 </li>
                 
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('complaints/rejected') ? ' active' : '' }}" href="{{route('filteredComplainList','rejected')}}">
+                    <a class="nav-main-link{{ request()->is('complaints/filter/rejected') ? ' active' : '' }}" href="{{ route('filteredComplainList','rejected') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Rejected</span>
+                        <span class="nav-main-link-name">{{ __('Rejected') }}</span>
                     </a>
                 </li>
                 
-                <li class="nav-main-heading">Manage Users</li>
+                <li class="nav-main-heading">{{ __('Manage Users') }}</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('contractors/create') ? ' active' : '' }}" href="{{route('createContractor')}}">
+                    <a class="nav-main-link{{ request()->is('contractors/create') ? ' active' : '' }}" href="{{ route('createContractor') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">Create Contractor</span>
+                        <span class="nav-main-link-name">{{ __('Create Contractor') }}</span>
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link{{ request()->is('contractors') ? ' active' : '' }}" href="{{route('listContractors')}}">
+                    <a class="nav-main-link{{ request()->is('contractors') ? ' active' : '' }}" href="{{ route('listContractors') }}">
                         <i class="nav-main-link-icon si si-list"></i>
-                        <span class="nav-main-link-name">List Contractors</span>
+                        <span class="nav-main-link-name">{{ __('List Contractors') }}</span>
                     </a>
                 </li>
                 
-                <li class="nav-main-heading">Preferences</li>
+                <li class="nav-main-heading">{{ __('Preferences') }}</li>
                 <li class="nav-main-item" disabled>
-                    <a class="nav-main-link{{ request()->is('settings') ? ' active' : '' }}" href="{{route('settings')}}">
+                    <a class="nav-main-link{{ request()->is('settings') ? ' active' : '' }}" href="{{ route('settings') }}">
                         <i class="nav-main-link-icon si si-settings"></i>
-                        <span class="nav-main-link-name">App Settings</span>
+                        <span class="nav-main-link-name">{{ __('App Settings') }}</span>
                     </a>
                 </li>
 

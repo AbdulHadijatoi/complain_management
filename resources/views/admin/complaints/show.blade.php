@@ -4,67 +4,67 @@
 <div class="content2 p-4">
     <div class="block block-rounded">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Complaint Details</h3>
+            <h3 class="block-title">{{ __('Complaint Details') }}</h3>
         </div>
         <div class="block-content block-content-full">
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
-                        <th style="width: 30%;">Post No:</th>
+                        <th style="width: 30%;">{{ __('Post No:') }}</th>
                         <td>{{ $complaint->post_no }}</td>
                     </tr>
                     <tr>
-                        <th>Post Address:</th>
+                        <th>{{ __('Post Address:') }}</th>
                         <td>{{ $complaint->post_address }}</td>
                     </tr>
                     <tr>
-                        <th>Type of Fault:</th>
+                        <th>{{ __('Type of Fault:') }}</th>
                         <td>{{ $complaint->type_of_fault }}</td>
                     </tr>
                     <tr>
-                        <th>Date of Complaint:</th>
+                        <th>{{ __('Date of Complaint:') }}</th>
                         <td>{{ $complaint->date_of_complaint }}</td>
                     </tr>
                     <tr>
-                        <th>Complainant Name:</th>
+                        <th>{{ __('Complainant Name:') }}</th>
                         <td>{{ $complaint->complainant_name }}</td>
                     </tr>
                     <tr>
-                        <th>Complaint RUT:</th>
+                        <th>{{ __('Complaint RUT:') }}</th>
                         <td>{{ $complaint->complaint_rut }}</td>
                     </tr>
                     <tr>
-                        <th>Phone:</th>
+                        <th>{{ __('Phone:') }}</th>
                         <td>{{ $complaint->phone }}</td>
                     </tr>
                     <tr>
-                        <th>Image:</th>
+                        <th>{{ __('Image:') }}</th>
                         <td>
                             <a href="{{ $complaint->image }}" target="_blank">
-                                <img src="{{ $complaint->image }}" alt="Complaint Image" style="width: 50px; height: 50px;">
+                                <img src="{{ $complaint->image }}" alt="{{ __('Complaint Image') }}" style="width: 50px; height: 50px;">
                             </a>
                         </td>
                     </tr>
                     <tr>
-                        <th>Comuna:</th>
+                        <th>{{ __('Comuna:') }}</th>
                         <td>{{ $complaint->comuna }}</td>
                     </tr>
                     <tr>
-                        <th>Sector:</th>
+                        <th>{{ __('Sector:') }}</th>
                         <td>{{ $complaint->sector }}</td>
                     </tr>
                     <tr>
-                        <th>Population:</th>
+                        <th>{{ __('Population:') }}</th>
                         <td>{{ $complaint->population }}</td>
                     </tr>
                     <tr>
-                        <th>Assigned To Contractor:</th>
+                        <th>{{ __('Assigned To Contractor:') }}</th>
                         @if($complaint->contractor)
                         <td>{{ $complaint->contractor->user->name??"" }}</td>
                         @endif
                     </tr>
                     <tr>
-                        <th>Status:</th>
+                        <th>{{ __('Status:') }}</th>
                         <td>{{ $complaint->status }}</td>
                     </tr>
                 </tbody>

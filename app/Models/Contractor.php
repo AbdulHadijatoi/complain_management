@@ -21,4 +21,14 @@ class Contractor extends Model {
     {
         return $this->hasMany(Complaint::class,'contractor_id');
     }
+
+    public function openComplaints(): HasMany
+    {
+        return $this->hasMany(Complaint::class, 'contractor_id')->where('status', 'open');
+    }
+
+    public function closedComplaints(): HasMany
+    {
+        return $this->hasMany(Complaint::class, 'contractor_id')->where('status', 'closed');
+    }
 }

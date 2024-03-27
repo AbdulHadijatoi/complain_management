@@ -34,7 +34,6 @@ class ComplaintController extends Controller
                                   ->orWhere('complainant_name', 'like', "%$search%");
                         })
                         ->paginate($perPage);
-                        // return $contractors;
         return view('admin.complaints.index',compact('complaints','contractors'));
     }
     
