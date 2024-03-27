@@ -16,7 +16,7 @@ class CreateComplaintDetailsTable extends Migration
         Schema::create('complaint_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger("complaint_id")->nullable();
-            $table->foreign('complaint_id')->references('id')->on('contractors')->onDelete('cascade');
+            $table->foreign('complaint_id')->references('id')->on('complaints')->onDelete('cascade');
             $table->string('update_remarks');
             $table->string('image')->nullable();
             $table->timestamps();
