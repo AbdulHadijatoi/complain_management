@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ComplaintDetails extends Model
 {
-    use SoftDeletes, HasFactory;
+    use HasFactory;
 
     protected $guarded = [];
     

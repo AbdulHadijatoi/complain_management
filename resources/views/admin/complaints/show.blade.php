@@ -9,6 +9,22 @@
         <div class="block-content block-content-full">
             <table class="table table-bordered table-striped">
                 <tbody>
+                    @if($complaint->complaintDetails)
+                        <tr>
+                            <th>{{ __('Contractor Update Remarks:') }}</th>
+                            <td>{{ $complaint->complaintDetails->update_remarks }}</td>
+                        </tr>
+                        @if($complaint->complaintDetails->image)
+                            <tr>
+                                <th>{{ __('Contractor Attachment Image:') }}</th>
+                                <td>
+                                    <a href="{{ $complaint->complaintDetails->image }}" target="_blank">
+                                        <img src="{{ $complaint->complaintDetails->image }}" alt="{{ __('Contractor Attachment Image') }}" style="width: 100px; height: 100px;">
+                                    </a>
+                                </td>
+                            </tr>
+                        @endif
+                    @endif
                     <tr>
                         <th style="width: 30%;">{{ __('Post No:') }}</th>
                         <td>{{ $complaint->post_no }}</td>
@@ -17,6 +33,7 @@
                         <th>{{ __('Post Address:') }}</th>
                         <td>{{ $complaint->post_address }}</td>
                     </tr>
+                    
                     <tr>
                         <th>{{ __('Type of Fault:') }}</th>
                         <td>{{ $complaint->type_of_fault }}</td>
