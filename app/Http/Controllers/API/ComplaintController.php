@@ -62,10 +62,11 @@ class ComplaintController extends AppBaseController{
             'update_remarks' => 'required',
             'proof_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5256',
         ]);
+        $user = auth()->user();
         $id = $request->complaint_id;
         $update_remarks = $request->update_remarks;
         $image = $request->image;
-        $complaint = Complaint::find($id);
+        $complaint = Complaint::where('id',$id)->where('contractor_id',$user->contractor->id)->first();
 
         if(!$complaint){
             return $this->sendError("complaint not found");
