@@ -19,16 +19,16 @@ class Contractor extends Model {
 
     public function complaints(): HasMany
     {
-        return $this->hasMany(Complaint::class,'contractor_id');
+        return $this->hasMany(Complaint::class,'contractor_id')->orderBy('id','desc');
     }
 
     public function openComplaints(): HasMany
     {
-        return $this->hasMany(Complaint::class, 'contractor_id')->where('status', 'open');
+        return $this->hasMany(Complaint::class, 'contractor_id')->orderBy('id','desc')->where('status', 'open');
     }
 
     public function closedComplaints(): HasMany
     {
-        return $this->hasMany(Complaint::class, 'contractor_id')->where('status', 'closed');
+        return $this->hasMany(Complaint::class, 'contractor_id')->orderBy('id','desc')->where('status', 'closed');
     }
 }

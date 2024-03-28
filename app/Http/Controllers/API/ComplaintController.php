@@ -51,7 +51,7 @@ class ComplaintController extends AppBaseController{
             return $this->sendError("contractor not found!");
         }
 
-        $complaints = $contractor->complaints;
+        $complaints = $contractor->openComplaints;
 
         return $this->sendDataResponse($complaints);
     }

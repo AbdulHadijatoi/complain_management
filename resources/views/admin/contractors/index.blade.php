@@ -1,3 +1,4 @@
+@extends('layouts.backend')
 @section('content')
     <div class="content2 p-4">
         <div class="block block-rounded">

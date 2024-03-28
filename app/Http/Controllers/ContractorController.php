@@ -14,7 +14,7 @@ class ContractorController extends Controller
     // create contractor
     public function listContractors(Request $request){
         $perPage = $request->perPage?? 10;
-        $contractors = Contractor::orderBy('id','desc')->paginate($perPage); // You can specify the number of items per page (e.g., 10)
+        $contractors = Contractor::orderBy('id','desc')->paginate($perPage);
 
         return view('admin.contractors.index', compact('contractors'));
     }
