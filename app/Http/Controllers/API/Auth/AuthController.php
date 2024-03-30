@@ -36,7 +36,7 @@ class AuthController extends AppBaseController
             return $this->sendDataResponse($data);
         }
 
-        return $this->sendError(['Unauthorized'], 422);
+        return $this->sendError('Unauthorized', 422);
     }
 
 }
