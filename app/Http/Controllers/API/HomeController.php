@@ -17,8 +17,8 @@ class HomeController extends AppBaseController
     {
         $data = [
             'comunas' => Comuna::get(['id','name'])->toArray(),
-            'populations' => Population::get(['id','name'])->toArray(),
-            'sectors' => Sector::get(['id','name'])->toArray(),
+            'sectors' => Sector::get(['id','name','comuna_id'])->toArray(),
+            'populations' => Population::get(['id','name','sector_id'])->toArray(),
             'type_of_faults' => TypeOfFault::get(['id','name'])->toArray()
         ];
 
