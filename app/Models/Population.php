@@ -16,4 +16,12 @@ class Population extends Model
     public function sector(){
         return $this->belongsTo(Sector::class,'sector_id');
     }
+
+    public function complaints(){
+        return $this->hasMany(Complaint::class,'comuna');
+    }
+
+    public function complaint(){
+        return $this->hasOne(Complaint::class,'comuna');
+    }
 }

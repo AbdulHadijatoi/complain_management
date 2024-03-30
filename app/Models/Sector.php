@@ -18,4 +18,12 @@ class Sector extends Model
     public function populations(){
         return $this->hasMany(Population::class,'sector_id');
     }
+
+    public function complaints(){
+        return $this->hasMany(Complaint::class,'comuna');
+    }
+
+    public function complaint(){
+        return $this->hasOne(Complaint::class,'comuna');
+    }
 }

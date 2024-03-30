@@ -29,6 +29,26 @@ class Complaint extends Model
     {
         return $this->belongsTo(ComplaintStatus::class,'code');
     }
+    
+    public function comuna(): BelongsTo
+    {
+        return $this->belongsTo(Comuna::class,'comuna');
+    }
+
+    public function sector(): BelongsTo
+    {
+        return $this->belongsTo(Sector::class,'sector');
+    }
+
+    public function population(): BelongsTo
+    {
+        return $this->belongsTo(Population::class,'population');
+    }
+
+    public function typeOfFault(): BelongsTo
+    {
+        return $this->belongsTo(TypeOfFault::class,'type_of_fault');
+    }
 
     // Accessor for image attribute
     public function getImageAttribute($value): string

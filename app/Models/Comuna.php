@@ -17,4 +17,14 @@ class Comuna extends Model
     public function sectors(){
         return $this->hasMany(Sector::class,'comuna_id');
     }
+    
+    public function complaints(){
+        return $this->hasMany(Complaint::class,'comuna');
+    }
+
+    public function complaint(){
+        return $this->hasOne(Complaint::class,'comuna');
+    }
+
+    
 }

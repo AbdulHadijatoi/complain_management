@@ -11,8 +11,7 @@ use App\Models\TypeOfFault;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class HomeController extends AppBaseController
-{
+class HomeController extends AppBaseController {
     public function constants()
     {
         $data = [
