@@ -21,17 +21,17 @@
     "Sector": "Sector",
     "Population": "Población",
     "Status": "Estado",
-    "Image": "Imagen",
+
     "Main Title": "Titulo principal",
     "Subtitle": "Subtitular",
     "Examples": "Ejemplos",
     "Blank": "Blanco",
     "Block Title": "Título del bloque",
     "Your content..": "Tu contenido..",
-    "Block Title": "Título del bloque",
-    "Your content..": "Tu contenido..",
-    "Block Title": "Título del bloque",
-    "Your content..": "Tu contenido..",
+
+
+
+
     "Confirm Delete Contest": "Confirmar eliminar concurso",
     "Are you sure you want to delete the contest?": "¿Estás seguro de que quieres eliminar el concurso?",
     "Winner Prize:": "Premio al ganador:",
@@ -51,52 +51,52 @@
     "Date of Complaint": "Fecha de la denuncia",
     "Complainant Name": "Nombre del denunciante",
     "Complaint RUT": "Denuncia RUT",
-    "Phone": "Teléfono",
+
     "Image (Optional)": "Imagen (opcional)",
-    "Comuna": "comuna",
+
     "Select Comuna": "Seleccione Comuna",
-    "Sector": "Sector",
+
     "Select Sector": "Seleccionar Sector",
-    "Population": "Población",
+
     "Select Population": "Seleccionar Población",
-    "Create Complaint": "Crear queja",
+
     "Edit Complaint": "Editar queja",
-    "Post Number": "Número postal",
-    "Post Address": "Dirección postal",
-    "Status": "Estado",
+
+
+
     "Select Status": "Seleccionar estado",
-    "Type of Fault": "Tipo de falla",
+
     "Select Type of Fault": "Seleccione el tipo de falla",
-    "Date of Complaint": "Fecha de la denuncia",
-    "Complainant Name": "Nombre del denunciante",
-    "Complaint RUT": "Denuncia RUT",
-    "Phone": "Teléfono",
-    "Image (Optional)": "Imagen (opcional)",
-    "Comuna": "comuna",
-    "Select Comuna": "Seleccione Comuna",
-    "Sector": "Sector",
-    "Select Sector": "Seleccionar Sector",
-    "Population": "Población",
-    "Select Population": "Seleccionar Población",
+
+
+
+
+
+
+
+
+
+
+
     "Update Complaint": "Actualizar queja",
     "All complaints": "Todas las quejas",
     "Listing": "Listado",
-    "No": "No",
-    "Code": "Código",
-    "Address": "DIRECCIÓN",
-    "Fault": "Falla",
-    "Date": "Fecha",
-    "Name": "Nombre",
-    "Ruth": "Piedad",
-    "Phone": "Teléfono",
-    "Image": "Imagen",
-    "Comuna": "comuna",
-    "Sector": "Sector",
-    "Population": "Población",
+
+
+
+
+
+
+
+
+
+
+
+
     "Contractor": "Contratista",
-    "Status": "Estado",
+
     "Action": "Acción",
-    "Image": "Imagen",
+
     "Assign": "Asignar",
     "Edit": "Editar",
     "View": "Vista",
@@ -105,10 +105,9 @@
     "Assign to contractor": "Asignar al contratista",
     "Close": "Cerca",
     "Select Contractor": "Seleccionar contratista",
-    "Select Contractor": "Seleccionar contratista",
     "SELECT": "SELECCIONAR",
-    "Close": "Cerca",
-    "Assign": "Asignar",
+
+
     "Complaint Details": "Detalles de la queja",
     "Post No:": "Número de publicación:",
     "Post Address:": "Dirección postal:",
@@ -125,59 +124,55 @@
     "Assigned To Contractor:": "Asignado al contratista:",
     "Status:": "Estado:",
     "Create Contractor": "Crear contratista",
-    "Name": "Nombre",
+
     "Email": "Correo electrónico",
     "Password": "Contraseña",
     "Confirm Password": "confirmar Contraseña",
-    "Create Contractor": "Crear contratista",
+
     "Edit Contractor": "Editar contratista",
-    "Name": "Nombre",
-    "Email": "Correo electrónico",
-    "Password": "Contraseña",
-    "Confirm Password": "confirmar Contraseña",
+
+
+
+
     "Update Contractor": "Actualizar contratista",
     "All Contractors": "Todos los contratistas",
-    "No": "No",
-    "Name": "Nombre",
-    "Email": "Correo electrónico",
+
+
+
     "Total Open Complaints": "Total de quejas abiertas",
     "Total Closed Complaints": "Total de denuncias cerradas",
     "Actions": "Comportamiento",
-    "Edit": "Editar",
+
     "Comunas": "comunas",
-    "Existing List": "Lista existente",
-    "Existing List": "Lista existente",
+    
     "Add New Comuna": "Agregar nueva comuna",
     "Enter New Comuna Name": "Ingrese el nuevo nombre de la comuna",
     "Update Comunas": "Actualizar Comunas",
     "Populations": "Poblaciones",
-    "Existing List": "Lista existente",
-    "Existing List": "Lista existente",
+    
     "Add New Population": "Agregar nueva población",
     "Enter New Population Name": "Ingrese el nuevo nombre de la población",
     "Update Populations": "Actualizar poblaciones",
     "Sectors": "Sectores",
-    "Existing List": "Lista existente",
-    "Existing List": "Lista existente",
     "Add New Sector": "Agregar nuevo sector",
     "Enter New Sector Name": "Ingrese el nuevo nombre del sector",
     "Update Sectors": "Actualizar sectores",
     "Type of Faults": "Tipo de fallas",
     "Existing List": "Lista existente",
-    "Existing List": "Lista existente",
+
     "Add New Type of Fault": "Agregar nuevo tipo de falla",
     "Enter New Type of Fault Name": "Ingrese un nuevo tipo de nombre de falla",
     "Update Type of Faults": "Actualizar tipo de fallas",
     "Admin Login": "Inicio de sesión de administrador",
-    "COMPLAINT MANAGEMENT": "GESTIÓN DE RECLAMACIONES",
+
     "Welcome back, please login": "Bienvenido de nuevo, por favor inicia sesión",
-    "Email": "Correo electrónico",
-    "Password": "Contraseña",
+
+
     "Login": "Acceso",
     "COMPLAINT MANAGEMENT": "GESTIÓN DE RECLAMACIONES",
     "Copyright &copy;": "Copyright &copia;",
     "All rights reserved": "Reservados todos los derechos",
-    "COMPLAINT MANAGEMENT": "GESTIÓN DE RECLAMACIONES",
+
     "Dashboard": "Panel",
     "Manage Complaints": "Administrar Quejas",
     "All": "Todo",
@@ -186,8 +181,11 @@
     "Closed": "Cerrado",
     "Rejected": "Rechazado",
     "Manage Users": "Administrar usuarios",
-    "Create Contractor": "Crear contratista",
+
     "List Contractors": "Lista de contratistas",
     "Preferences": "Preferencias",
-    "App Settings": "Ajustes de Aplicacion"
+    "App Settings": "Ajustes de Aplicacion",
+    "We have already received a complaint about this problem. Thank you for your feedback!": "Ya hemos recibido una queja sobre este problema. ¡Gracias por tus comentarios!",
+    "Complaint created successfully": "Queja creada exitosamente",
+    "Complaint status updated successfully!": "¡El estado de la queja se actualizó exitosamente!"
 }

@@ -8,28 +8,28 @@
     "Rejected Complaints": "",
     "View rejected": "",
     "Recently submitted complaints": "",
-    "No": "",
-    "Code": "",
-    "Address": "",
-    "Fault": "",
-    "Date": "",
-    "Name": "",
-    "Ruth": "",
-    "Phone": "",
-    "Image": "",
-    "Comuna": "",
-    "Sector": "",
-    "Population": "",
-    "Status": "",
-    "Image": "",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "Main Title": "",
     "Subtitle": "",
     "Examples": "",
     "Blank": "",
-    "Block Title": "",
-    "Your content..": "",
-    "Block Title": "",
-    "Your content..": "",
+
+
+
+
     "Block Title": "",
     "Your content..": "",
     "Confirm Delete Contest": "",
@@ -44,13 +44,13 @@
     "Entry Fee:": "",
     "Delete Contest": "",
     "Cancel": "",
-    "Create Complaint": "",
-    "Post Number": "",
-    "Post Address": "",
-    "Type of Fault": "",
-    "Date of Complaint": "",
-    "Complainant Name": "",
-    "Complaint RUT": "",
+
+
+
+
+
+
+
     "Phone": "",
     "Image (Optional)": "",
     "Comuna": "",
@@ -70,14 +70,13 @@
     "Date of Complaint": "",
     "Complainant Name": "",
     "Complaint RUT": "",
-    "Phone": "",
-    "Image (Optional)": "",
-    "Comuna": "",
-    "Select Comuna": "",
-    "Sector": "",
-    "Select Sector": "",
-    "Population": "",
-    "Select Population": "",
+
+
+
+
+
+
+    
     "Update Complaint": "",
     "All complaints": "",
     "Listing": "",
@@ -88,15 +87,13 @@
     "Date": "",
     "Name": "",
     "Ruth": "",
-    "Phone": "",
+
     "Image": "",
-    "Comuna": "",
-    "Sector": "",
-    "Population": "",
+
     "Contractor": "",
-    "Status": "",
+
     "Action": "",
-    "Image": "",
+
     "Assign": "",
     "Edit": "",
     "View": "",
@@ -105,10 +102,9 @@
     "Assign to contractor": "",
     "Close": "",
     "Select Contractor": "",
-    "Select Contractor": "",
+
     "SELECT": "",
-    "Close": "",
-    "Assign": "",
+
     "Complaint Details": "",
     "Post No:": "",
     "Post Address:": "",
@@ -125,59 +121,52 @@
     "Assigned To Contractor:": "",
     "Status:": "",
     "Create Contractor": "",
-    "Name": "",
+
     "Email": "",
     "Password": "",
     "Confirm Password": "",
-    "Create Contractor": "",
+
     "Edit Contractor": "",
-    "Name": "",
-    "Email": "",
-    "Password": "",
-    "Confirm Password": "",
+
     "Update Contractor": "",
     "All Contractors": "",
-    "No": "",
-    "Name": "",
-    "Email": "",
+
     "Total Open Complaints": "",
     "Total Closed Complaints": "",
     "Actions": "",
-    "Edit": "",
+
     "Comunas": "",
-    "Existing List": "",
-    "Existing List": "",
+    
     "Add New Comuna": "",
     "Enter New Comuna Name": "",
     "Update Comunas": "",
     "Populations": "",
-    "Existing List": "",
-    "Existing List": "",
+    
     "Add New Population": "",
     "Enter New Population Name": "",
     "Update Populations": "",
     "Sectors": "",
     "Existing List": "",
-    "Existing List": "",
+
     "Add New Sector": "",
     "Enter New Sector Name": "",
     "Update Sectors": "",
     "Type of Faults": "",
-    "Existing List": "",
-    "Existing List": "",
+
+
     "Add New Type of Fault": "",
     "Enter New Type of Fault Name": "",
     "Update Type of Faults": "",
     "Admin Login": "",
     "COMPLAINT MANAGEMENT": "",
     "Welcome back, please login": "",
-    "Email": "",
-    "Password": "",
+
+
     "Login": "",
-    "COMPLAINT MANAGEMENT": "",
+
     "Copyright &copy;": "",
     "All rights reserved": "",
-    "COMPLAINT MANAGEMENT": "",
+
     "Dashboard": "",
     "Manage Complaints": "",
     "All": "",
@@ -186,8 +175,11 @@
     "Closed": "",
     "Rejected": "",
     "Manage Users": "",
-    "Create Contractor": "",
+
     "List Contractors": "",
     "Preferences": "",
-    "App Settings": ""
+    "App Settings": "",
+    "We have already received a complaint about this problem. Thank you for your feedback!": "",
+    "Complaint created successfully": "",
+    "Complaint status updated successfully!": ""
 }
