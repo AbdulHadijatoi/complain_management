@@ -13,4 +13,8 @@ class Comuna extends Model
     protected $table = "comuna";
 
     protected $guarded = [];
+
+    public function sectors(){
+        return $this->hasMany(Sector::class,'comuna_id');
+    }
 }

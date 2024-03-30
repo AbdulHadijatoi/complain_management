@@ -12,4 +12,8 @@ class Population extends Model
 
     protected $table = "population";
     protected $guarded = [];
+
+    public function sector(){
+        return $this->belongsTo(Sector::class,'sector_id');
+    }
 }
