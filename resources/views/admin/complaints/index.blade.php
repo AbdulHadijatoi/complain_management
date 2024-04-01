@@ -60,7 +60,7 @@
                             <td class="text-center">{{ ++$index }}</td>
                             <td>{{ $complaint->post_no }}</td>
                             <td>{{ $complaint->post_address }}</td>
-                            <td>{{ $complaint->type_of_fault?$complaint->type_of_fault->name:'-' }}</td>
+                            <td>{{ $complaint->typeOfFault?$complaint->typeOfFault->name:'-' }}</td>
                             <td>{{ $complaint->date_of_complaint }}</td>
                             <td>{{ $complaint->complainant_name }}</td>
                             <td>{{ $complaint->complaint_rut }}</td>
