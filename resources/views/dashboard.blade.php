@@ -126,7 +126,7 @@
                             <td class="text-center">{{ ++$index }}</td>
                             <td>{{ $complaint->post_no }}</td>
                             <td>{{ $complaint->post_address }}</td>
-                            <td>{{ $complaint->type_of_fault }}</td>
+                            <td>{{ $complaint->type_of_fault?$complaint->type_of_fault->name:'' }}</td>
                             <td>{{ $complaint->date_of_complaint }}</td>
                             <td>{{ $complaint->complainant_name }}</td>
                             <td>{{ $complaint->complaint_rut }}</td>
@@ -137,9 +137,9 @@
                                 </a>
                             </td>
                             
-                            <td>{{ $complaint->comuna }}</td>
-                            <td>{{ $complaint->sector }}</td>
-                            <td>{{ $complaint->population }}</td>
+                            <td>{{ $complaint->comuna?$complaint->comuna->name:"" }}</td>
+                            <td>{{ $complaint->sector?$complaint->sector->name:'' }}</td>
+                            <td>{{ $complaint->population?$complaint->population->name:'' }}</td>
                             <td>
                                 <span class="btn btn-sm btn-alt-warning">{{ $complaint->status ?? '-' }}</span>
                             </td>
