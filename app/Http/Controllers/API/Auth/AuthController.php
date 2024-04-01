@@ -30,7 +30,8 @@ class AuthController extends AppBaseController
             $token = $user->createToken('COMPLAINTSYSTEM')->accessToken;
 
             $data = [
-                'token' => $token
+                'token' => $token,
+                'user' => $user
             ];
 
             return $this->sendDataResponse($data);
