@@ -36,7 +36,7 @@
                     
                     <tr>
                         <th>{{ __('Type of Fault:') }}</th>
-                        <td>{{ $complaint->type_of_fault }}</td>
+                        <td>{{ $complaint->type_of_fault?$complaint->type_of_fault->name:'-' }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('Date of Complaint:') }}</th>
@@ -64,15 +64,15 @@
                     </tr>
                     <tr>
                         <th>{{ __('Comuna:') }}</th>
-                        <td>{{ $complaint->comuna }}</td>
+                        <td>{{ $complaint->comuna?$complaint->comuna->name:'' }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('Sector:') }}</th>
-                        <td>{{ $complaint->sector }}</td>
+                        <td>{{ $complaint->sector?$complaint->sector->name:'' }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('Population:') }}</th>
-                        <td>{{ $complaint->population }}</td>
+                        <td>{{ $complaint->population?$complaint->population->name:'' }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('Assigned To Contractor:') }}</th>
