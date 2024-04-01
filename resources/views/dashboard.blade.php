@@ -137,9 +137,9 @@
                                 </a>
                             </td>
                             
-                            <td>{{ $complaint->comuna?$complaint->comuna->name:"" }}</td>
-                            <td>{{ $complaint->sector?$complaint->sector->name:'' }}</td>
-                            <td>{{ $complaint->population?$complaint->population->name:'' }}</td>
+                            <td>{{ $complaint->getComuna?$complaint->getComuna->name:"" }}</td>
+                            <td>{{ $complaint->getSector?$complaint->getSector->name:'' }}</td>
+                            <td>{{ $complaint->getPopulation?$complaint->getPopulation->name:'' }}</td>
                             <td>
                                 <span class="btn btn-sm btn-alt-warning">{{ $complaint->status ?? '-' }}</span>
                             </td>

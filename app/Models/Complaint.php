@@ -44,6 +44,21 @@ class Complaint extends Model
     {
         return $this->belongsTo(Population::class,'population');
     }
+    
+    public function getComuna(): BelongsTo
+    {
+        return $this->belongsTo(Comuna::class,'comuna');
+    }
+
+    public function getSector(): BelongsTo
+    {
+        return $this->belongsTo(Sector::class,'sector');
+    }
+
+    public function getPopulation(): BelongsTo
+    {
+        return $this->belongsTo(Population::class,'population');
+    }
 
     public function typeOfFault(): BelongsTo
     {
