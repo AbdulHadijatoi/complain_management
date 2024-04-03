@@ -31,7 +31,7 @@ class ComplaintController extends AppBaseController{
             'comuna' => $request->comuna,
             'sector' => $request->sector,
             'population' => $request->population,
-        ])->first();
+        ])->where("status",'!=',"closed")->first();
 
         // If a similar complaint exists, return a message
         if ($existingComplaint) {
