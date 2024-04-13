@@ -76,4 +76,15 @@ class Complaint extends Model
 
         return $value??'';
     }
+    
+    protected $appends = ['google_map_link'];
+
+    public function getGoogleMapLinkAttribute()
+    {
+        if ($this->lat && $this->long) {
+            return 'https://maps.google.com/maps?q=' . $this->lat . ',' . $this->long;
+        } else {
+            return null;
+        }
+    }
 }

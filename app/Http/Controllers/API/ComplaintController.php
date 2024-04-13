@@ -24,6 +24,10 @@ class ComplaintController extends AppBaseController{
             'comuna' => 'required|exists:comuna,id',
             'sector' => 'required|exists:sectors,id',
             'population' => 'required|exists:population,id',
+            //Additional parameters added on 13th APRIL
+            'address' => 'nullable|string',
+            'lat' => 'nullable|string',
+            'long' => 'nullable|string',
         ]);
 
         // Check if a similar complaint already exists in the database

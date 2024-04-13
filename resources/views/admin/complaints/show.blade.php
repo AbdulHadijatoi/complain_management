@@ -81,6 +81,16 @@
                         @endif
                     </tr>
                     <tr>
+                        <th>{{ __('Complaint Address:') }}</th>
+                        <td>
+                            @if($complaint->address && $complaint->lat && $complaint->long)
+                                <a href="{{ 'https://maps.google.com/maps?q=' . $complaint->lat . ',' . $complaint->long }}" target="_blank">{{ $complaint->address }}</a>
+                            @else
+                                {{ $complaint->address }}
+                            @endif
+                        </td>
+                    </tr>
+                    <tr>
                         <th>{{ __('Status:') }}</th>
                         <td>{{ $complaint->status }}</td>
                     </tr>
